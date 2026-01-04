@@ -107,10 +107,10 @@ def main():
         print(f"\n{Colors.BOLD}Encryption Example:{Colors.RESET}")
         print(f"  Input: secret.txt (1,234 bytes)")
         print(f"  Password: ********")
-        print(f"  {Colors.GREEN}✓ Encrypted to: secret.txt.enc{Colors.RESET}")
+        print(f"  {Colors.GREEN}[OK] Encrypted to: secret.txt.enc{Colors.RESET}")
         print(f"\n{Colors.BOLD}Decryption Example:{Colors.RESET}")
         print(f"  Input: secret.txt.enc")
-        print(f"  {Colors.GREEN}✓ Decrypted to: secret_decrypted.txt{Colors.RESET}")
+        print(f"  {Colors.GREEN}[OK] Decrypted to: secret_decrypted.txt{Colors.RESET}")
         return
     
     if not args.action or not args.input:
@@ -125,11 +125,11 @@ def main():
     if args.action == 'encrypt':
         print(f"{Colors.CYAN}[*]{Colors.RESET} Encrypting {args.input}...")
         if encryptor.encrypt(args.input, output):
-            print(f"{Colors.GREEN}✓ Encrypted to: {output}{Colors.RESET}")
+            print(f"{Colors.GREEN}[OK] Encrypted to: {output}{Colors.RESET}")
     else:
         print(f"{Colors.CYAN}[*]{Colors.RESET} Decrypting {args.input}...")
         if encryptor.decrypt(args.input, output):
-            print(f"{Colors.GREEN}✓ Decrypted to: {output}{Colors.RESET}")
+            print(f"{Colors.GREEN}[OK] Decrypted to: {output}{Colors.RESET}")
 
 
 if __name__ == "__main__":
